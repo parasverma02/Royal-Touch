@@ -1,0 +1,17 @@
+.ImageSlider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 400px;
+    width: 100%;
+    /* border: 5px solid red; */
+    display: flex;
+    box-sizing: border-box;
+    
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    
+}

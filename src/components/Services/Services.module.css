@@ -1,0 +1,25 @@
+.Container {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+}
+
+.Heading {
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+}
+
+.SubHeading {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+
+}
+
+.SubHeading h2 {
+    width: 33%;
+    text-align: center;
+}

@@ -10,11 +10,12 @@ class SubServices extends Component {
         this.props.history.push({pathname: '/service/' + service})
     }
     render() {
-        let services = this.props.subServices.map(service => (
+        let services = this.props.service.subServices.map(service => (
             <SingleService 
-                key={service}
-                serviceName={service} 
-                serviceClicked={() => this.props.serviceClicked(service)} />
+                key={service.id}
+                serviceName={service.name} 
+                id={service.id}
+                serviceClicked={() => this.props.serviceClicked(service.id)} />
             ))
         return (
             <div className={classes.SubService}>

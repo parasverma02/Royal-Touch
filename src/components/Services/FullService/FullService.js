@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ServicesData from '../../../data/ServicesData'
 import classes from './FullService.module.css'
 import HeaderImage from '../../../assets/image4.jpg'
+import ChildServices from './ChildServices/ChildServices'
 class FullService extends Component {
 
     state = {
@@ -34,17 +35,23 @@ class FullService extends Component {
     }
     render() {
         console.log(this.state)
+
         
         return (
-            <div className={classes.ServiceContainer}>
+           this.state.service? 
+           <div className={classes.ServiceContainer}>
                 <div className={classes.ServiceHeader}>
                     <div className={classes.ServiceHeading}>
                         <h1>{this.state.service? this.state.service.name: null}</h1>
                     </div>
                     <img src={HeaderImage} alt="This is pic"/>
                 </div>
+                <div>
+                    <ChildServices services={this.state.service.childServices} />
+                </div>
                 
             </div>
+            : null
         )
     }
     

@@ -7,7 +7,7 @@ import Services from './components/Services/Services';
 import Home from './components/Home/Home';
 import Store from './components/Store/Store';
 import About from './components/About/About';
-import SkinService1 from './components/Services/Services/SkinService1'
+import FullService from './components/Services/FullService/FullService'
 import Galary from './components/Galary/Galary';
 import Contact from './components/Contact/Contact';
 // import ServicesRoute from './components/Routes/ServicesRoutes/ServicesRoutes'
@@ -24,7 +24,7 @@ function App() {
         <Route path="/galary" component={Galary} />
         <Route path="/contact" component={Contact} />  
         <Switch>
-          <Route path={'/services/:service'} exact component={SkinService1} />
+          <Route path={'/services/:id'} exact component={FullService} />
           <Route path="/services" component={Services}/>
           <Redirect from="/" exact to="/home" />
         </Switch>

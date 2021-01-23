@@ -1,10 +1,9 @@
 .ImageSlider {
-    position: absolute;
-    left: 0;
-    right: 0;
+    position: relative;
     height: 400px;
     width: 100%;
-    /* border: 5px solid red; */
+    border: 5px solid red;
+    top: 10px;
     display: flex;
     box-sizing: border-box;
     

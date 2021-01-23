@@ -6,6 +6,7 @@
     left: 0; /* ?? */
     color: black;
     background-color: rgb(211, 211, 211);
+    opacity: 0.5;
     display: flex;
     align-items: center;
     box-sizing: border-box;

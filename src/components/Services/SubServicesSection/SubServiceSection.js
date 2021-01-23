@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import SingleService from './SingleService/SingleService';
-import classes from './SubService.module.css';
-import { withRouter } from 'react-router-dom'
+import SingleService from './SingleServiceCard/SingleServiceCard';
+import classes from './SubServiceSection.module.css';
 
 class SubServices extends Component {
 
-    clickServiceHandler = service => {
-        console.log(this.props)
-        this.props.history.push({pathname: '/service/' + service})
-    }
     render() {
         let services = this.props.service.subServices.map(service => (
             <SingleService 
                 key={service.id}
                 serviceName={service.name} 
                 id={service.id}
-                serviceClicked={() => this.props.serviceClicked(service.id)} />
+                serviceClicked={() => this.props.serviceClicked(service.id,this.props.service.id)} />
             ))
         return (
             <div className={classes.SubService}>
-                <h3>{this.props.serviceName}</h3>
+                <h3>{this.props.service.serviceName}</h3>
                 <div className={classes.Services}>
                     {services}
                 </div>
@@ -29,4 +24,4 @@ class SubServices extends Component {
    
 }
 
-export default withRouter(SubServices)
+export default SubServices

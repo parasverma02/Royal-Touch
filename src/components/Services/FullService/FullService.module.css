@@ -1,0 +1,29 @@
+.ServiceContainer {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    top: 10px;
+    border: 1px solid red;
+    box-sizing: border-box;
+
+}
+.ServiceHeader {
+   height: 250px;
+   display: flex;
+   flex-flow: column;
+   /* text-align: center; */
+    
+}
+.ServiceHeader img {
+    width: 100%;
+    height: 80%;
+}
+.ServiceHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

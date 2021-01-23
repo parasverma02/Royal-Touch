@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Services.module.css';
-import SubService from './SubServices/SubService';
+import SubService from './SubServicesSection/SubServiceSection';
 // import SkinService1 from './Services/SkinService1';
 // import { Route } from 'react-router-dom'
 import ServicesData from '../../data/ServicesData'
@@ -11,12 +11,16 @@ class Services extends Component {
     }
 
     componentDidMount = () => {
-        console.log('in Component did mount!')
         this.setState({services: ServicesData})
     }
 
-    clickServiceHandler = id => {
-        this.props.history.push({pathname: this.props.match.path + '/' + id})
+    clickServiceHandler = (id, parentServiceID) => {
+        const queryParams = encodeURIComponent('parentServiceID') + '=' + encodeURIComponent(parentServiceID)
+
+        this.props.history.push({
+            pathname: this.props.match.path + '/' + id,
+            search: '?' + queryParams
+        })
     }
 
     render() {

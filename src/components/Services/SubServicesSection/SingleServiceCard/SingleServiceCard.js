@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './SingleService.module.css'
+import classes from './SingleServiceCard.module.css'
 
 const singleService = props => {
     return (

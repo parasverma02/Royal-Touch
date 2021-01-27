@@ -1,8 +1,9 @@
-.Content {
-    flex: 1 0 auto; /* ?? */
-    margin-top: 50px;
+.Layout {
+    display: flex;
+    flex-direction: column;
 }
 
-.Footer {
-    flex-shrink: 0; /* ?? */
+.Content {
+    flex: 1 0 auto; /* ?? */
+    margin-top: 60px;
 }

@@ -1,16 +1,14 @@
 .ServiceContainer {
     position: relative;
-    left: 0;
-    right: 0;
     width: 100%;
     height: auto;
-    top: 10px;
+    margin-top: 10px;
     border: 1px solid red;
     box-sizing: border-box;
 
 }
 .ServiceHeader {
-   height: 250px;
+   height: 450px;
    display: flex;
    flex-flow: column;
    /* text-align: center; */
@@ -26,4 +24,9 @@
     align-items: center;
 }
 
+.ChildServicesContainer {
+    width: 60%;
+    margin: 10px auto;
+    border: 1px solid green;
+}
 

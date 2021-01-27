@@ -1,3 +1,68 @@
 .Footer {
     flex-shrink: 0;
+    background-color: rgb(224, 224, 224);
+    color: #4b4c4d;
+    height: 400px;
+    /* width: 100%; */
+}
+
+.FooterHolder {
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.Footer h3 {
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom: 20px;
+}
+
+.Widget {
+    width: 20%;
+    padding: 0 30px;
+    font-size: 14px;
+    /* text-align: center; */
+}
+
+.Footer dt {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+   
+}
+.Footer dd {
+    display: block;
+    margin: 0 0 10px;
+    left: 0;
+    padding: 0;
+}
+
+.Widget ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    /* margin-bottom: 0; */
+}
+
+.Widget ul li {
+    margin-bottom: 10px;
+}
+.Widget ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+    
+}
+.Widget ul a:hover {
+    opacity: 1;
+}
+
+.Widget hr {
+    margin: 10px 0;
+}
+.HoursList {
+   
 }

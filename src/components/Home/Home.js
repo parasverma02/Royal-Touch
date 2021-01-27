@@ -5,7 +5,7 @@ import ImageSlider from './ImageSlider/ImageSlider'
 const home = props => {
     return (
         <div className={classes.Container}>
-            <ImageSlider />
+            <ImageSlider />    
         </div>
     )
 }

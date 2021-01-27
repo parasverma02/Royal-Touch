@@ -46,7 +46,7 @@ class FullService extends Component {
                     </div>
                     <img src={HeaderImage} alt="This is pic"/>
                 </div>
-                <div>
+                <div className={classes.ChildServicesContainer}>
                     <ChildServices services={this.state.service.childServices} />
                 </div>
                 

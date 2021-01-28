@@ -1,6 +1,8 @@
 import React from 'react'
 import classes from './Footer.module.css';
+import './FooterExtraStyling.css'
 const footer = props => {
+
     return (
         <div className={classes.Footer}>
             <footer>
@@ -43,12 +45,11 @@ const footer = props => {
                     </div>
                     <div className={classes.Widget}>
                         <h3>CONNECT WITH US</h3>
-                        <ul>
-                            <li>Item 1</li>
-                            <li>Item 1</li>
-                            <li>Item 1</li>
-                            <li>Item 1</li>
-                        </ul>
+                        <div className={classes.SocialMediaIcons}>
+                            <a href="/" className="fa fa-facebook" > </a>
+                            <a href="/" className="fa fa-instagram" > </a>
+                            <a href="/" className="fa fa-twitter" > </a>
+                        </div>
                     </div>
                 </div>
             </footer>

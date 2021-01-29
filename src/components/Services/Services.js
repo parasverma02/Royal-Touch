@@ -12,6 +12,7 @@ class Services extends Component {
 
     componentDidMount = () => {
         this.setState({services: ServicesData})
+        console.log("[Component Did mount]")
     }
 
     clickServiceHandler = (id, parentServiceID) => {
@@ -24,6 +25,7 @@ class Services extends Component {
     }
 
     render() {
+        console.log("[Render]")
         let subServices = this.state.services.map(service => {
             return <SubService 
                 key={service.serviceName}

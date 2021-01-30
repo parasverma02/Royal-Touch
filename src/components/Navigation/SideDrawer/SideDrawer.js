@@ -11,7 +11,7 @@ const sideDrawer = props => {
         <Fragment>
             <Backdrop show={props.open} close={props.closed}/>
              <nav className={DrawerClasses.join(' ')}>
-                    <NavigationItems />
+                    <NavigationItems  closeSideMenu={props.closed}/>
             </nav>
         </Fragment>
     );

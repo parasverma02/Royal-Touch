@@ -7,3 +7,10 @@
     flex: 1 0 auto; /* ?? */
     margin-top: 60px;
 }
+
+main {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    background-color:rgb(255, 255, 162);
+}

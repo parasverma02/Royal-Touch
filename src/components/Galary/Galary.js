@@ -1,5 +1,12 @@
 import React from 'react';
-
-const galary = props => (<h1>This is Galary</h1>)
+import classes from './Galary.module.css';
+const galary = props => {
+    return(
+        <div className={classes.Galary}>
+            <h1>This is Galary</h1>
+        </div>
+        
+    )
+}
 
 export default galary

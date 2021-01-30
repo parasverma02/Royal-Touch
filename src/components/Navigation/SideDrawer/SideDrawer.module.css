@@ -4,6 +4,7 @@
     top: 0;
     width: 250px;
     max-width: 60%;
+    min-width: 40%;
     height: 100%;
     background-color: rgb(182, 182, 182);
     padding: 15px;

@@ -6,22 +6,22 @@ class SubServices extends Component {
 
     render() {
         let services = this.props.service.subServices.map(service => (
-            <SingleService 
+            <SingleService
                 key={service.id}
-                serviceName={service.name} 
+                serviceName={service.name}
                 id={service.id}
-                serviceClicked={() => this.props.serviceClicked(service.id,this.props.service.id)} />
-            ))
+                serviceClicked={() => this.props.serviceClicked(service.id, this.props.service.id)} />
+        ))
         return (
             <div className={classes.SubService}>
-                <h3>{this.props.service.serviceName}</h3>
+                {/* <h3>{this.props.service.serviceName}</h3> */}
                 <div className={classes.Services}>
                     {services}
                 </div>
             </div>
         )
     }
-   
+
 }
 
 export default SubServices

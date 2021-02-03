@@ -12,4 +12,4 @@ const childServices = props => {
     return (services)
 }
 
-export default childServices
+export default childServices;

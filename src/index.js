@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import reducer from './store/reducer';
+import thunk from 'redux-thunk';// Middleware for async code
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // redux dec tools
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 ReactDOM.render(
   // <React.StrictMode>  ??
-    <App />,
+    <Provider store={store}>
+        <App />
+    </Provider>,
   // </React.StrictMode>,
   document.getElementById('root')
 );

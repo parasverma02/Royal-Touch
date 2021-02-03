@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import ServicesData from '../../../data/ServicesData'
-import classes from './FullService.module.css'
-import HeaderImage from '../../../assets/image4.jpg'
-import ChildServices from './ChildServices/ChildServices'
+import classes from './FullService.module.css';
+import HeaderImage from '../../../assets/image4.jpg';
+import ChildServices from './ChildServices/ChildServices';
+import { connect } from 'react-redux';
+
 class FullService extends Component {
 
     state = {
@@ -12,19 +13,18 @@ class FullService extends Component {
     };
 
     componentDidMount = () => {
-        // console.log(this.props.location.search)
         const query = new URLSearchParams(this.props.location.search);
         
         const parentServiceID = query.get('parentServiceID');
-        const id = this.props.match.params.id
+        const id = this.props.match.params.id;
         
-        for(const idx in ServicesData){
-            if(ServicesData[idx].id === parentServiceID){
-                const subServices = ServicesData[idx].subServices
+        for(const idx in this.props.services){
+            if(this.props.services[idx].id === parentServiceID){
+                const subServices = this.props.services[idx].subServices;
                 for(const idx2 in subServices){
                     if(subServices[idx2].id === id){
-                        this.setState({service: subServices[idx2], id: id})
-                        break
+                        this.setState({service: subServices[idx2], id: id});
+                        break;
                     }
                 }
             }
@@ -57,4 +57,10 @@ class FullService extends Component {
     
 }
 
-export default FullService
+const mapStateToProps = state => {
+    return {
+        services: state.services
+    };
+};
+
+export default connect(mapStateToProps)(FullService);

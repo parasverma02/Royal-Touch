@@ -77,6 +77,56 @@ const data = [
                         price: 10
                     }
                 ]
+            },
+            {
+                name: 'Skin Service4', 
+                id: 'SkinService4',
+                description: 'This is Description!',
+                childServices: [
+                    {
+                        name: 'SS4 Child Service 1',
+                        id: 'SS4_CS1',
+                        description: 'This is child service descritpion!',
+                        price: 10
+                    },
+                    {
+                        name: 'SS4 Child Service 2',
+                        id: 'SS4_CS2',
+                        description: 'This is child service descritpion!',
+                        price: 10
+                    },
+                    {
+                        name: 'SS4 Child Service 3',
+                        id: 'SS4_CS3',
+                        description: 'This is child service descritpion!',
+                        price: 10
+                    }
+                ]
+            },
+            {
+                name: 'Skin Service5', 
+                id: 'SkinService5',
+                description: 'This is Description!',
+                childServices: [
+                    {
+                        name: 'SS5 Child Service 1',
+                        id: 'SS5_CS1',
+                        description: 'This is child service descritpion!',
+                        price: 10
+                    },
+                    {
+                        name: 'SS5 Child Service 2',
+                        id: 'SS5_CS2',
+                        description: 'This is child service descritpion!',
+                        price: 10
+                    },
+                    {
+                        name: 'SS5 Child Service 3',
+                        id: 'SS5_CS3',
+                        description: 'This is child service descritpion!',
+                        price: 10
+                    }
+                ]
             }
         ]
     },

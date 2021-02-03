@@ -1,12 +1,22 @@
 .SubService {
-    width: 90%;
-    margin: auto;
-    /* border: 2px solid red; */
-    margin-bottom: 10px;
+    width: 70%;
+    margin: 10px 10px; 
 }
 
 .SubService h3 {
-    margin-left: 10px;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px;
+}
+.ServicesContainer {
+    display: flex;
+
+}
+
+.Services {
+    display: inline-block;
+    margin: 10px auto;
+    box-sizing: border-box;
 }
 
 

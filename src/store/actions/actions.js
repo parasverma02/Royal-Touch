@@ -1,5 +1,5 @@
 
-import axios from '../axios.order';
+import axios from '../../axios.order';
 // import ServicesData from '../data/ServicesData';
 //Actions
 export const Set_Services = "Set_Services";

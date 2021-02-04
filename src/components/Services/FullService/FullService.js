@@ -59,7 +59,7 @@ class FullService extends Component {
 
 const mapStateToProps = state => {
     return {
-        services: state.services
+        services: state.service.services
     };
 };
 

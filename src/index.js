@@ -4,12 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { createStore, compose, applyMiddleware } from 'redux';
-import reducer from './store/reducer';
+import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
+import reducer from './store/reducers/reducer';
+import storeReducer from './store/reducers/storeReducer';
 import thunk from 'redux-thunk';// Middleware for async code
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // redux dec tools
-const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
+
+const rootReducers = combineReducers({
+    service: reducer,
+    store: storeReducer
+});
+
+const store = createStore(rootReducers, composeEnhancers(applyMiddleware(thunk)));
 ReactDOM.render(
   // <React.StrictMode>  ??
     <Provider store={store}>

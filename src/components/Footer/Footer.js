@@ -6,7 +6,7 @@ const footer = props => {
     return (
         <div className={classes.Footer}>
             <footer>
-                <div class={classes.FooterHolder}>
+                <div className={classes.FooterHolder}>
                 <div className={classes.Widget}>
                         <h3>QUICK LINKS</h3>
                         <ul>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './Services.module.css';
 import SubService from './SubServicesSection/SubServiceSection';
-import * as actionTypes from '../../store/actions';
+import * as actionTypes from '../../store/actions/actions';
 import { connect } from 'react-redux';
 class Services extends Component {
 
@@ -58,7 +58,7 @@ class Services extends Component {
 
 const mapStateToProps = state => {
     return {
-        services: state.services
+        services: state.service.services
     };
 };
 

@@ -10,6 +10,7 @@ const navigationItems = props => {
             <NavItem link='/services' closeSideMenu={props.closeSideMenu}>SERVICES</NavItem>
             <NavItem link='/galary' closeSideMenu={props.closeSideMenu}>GALARY</NavItem>
             <NavItem link='/contact' closeSideMenu={props.closeSideMenu}>CONTACT</NavItem>
+            <NavItem link='/book' closeSideMenu={props.closeSideMenu}>BOOK</NavItem>
         </ul>
     )
 }

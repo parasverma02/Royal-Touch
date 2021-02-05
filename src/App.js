@@ -10,6 +10,7 @@ import About from './components/About/About';
 import FullService from './components/Services/FullService/FullService'
 import Galary from './components/Galary/Galary';
 import Contact from './components/Contact/Contact';
+import BookAppointment from './components/BookAppointment/BookAppointment';
 // import ServicesRoute from './components/Routes/ServicesRoutes/ServicesRoutes'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         {/* <ServicesRoute subPath="/services" /> */}
         <Route path="/galary" component={Galary} />
         <Route path="/contact" component={Contact} />  
+        <Route path="/book" component={BookAppointment} />
         <Switch>
           <Route path={'/services/:id'} exact component={FullService} />
           <Route path="/services" component={Services}/>

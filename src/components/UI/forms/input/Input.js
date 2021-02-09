@@ -6,10 +6,12 @@ const input = props => {
     switch (props.elementType) {
         case 'input':
             inputElement = <input
+                name={props.name}
                 className={classes.InputElement}
                 {...props.elementConfig}
                 value={props.value}
                 onChange={props.handleChange}
+                onBlur={props.handleBlur}
             />
             break;
         default:

@@ -14,12 +14,13 @@ const bookingForm = props => {
                 {elementsArray.map(element => {
                     return <Input
                         key={element.id}
+                        name={element.id}
                         elementType={element.config.elementType}
                         elementConfig={element.config.elementConfig}
                         value={element.config.value}
                         label={element.config.label}
-                        
-                        handleChange={(event) => props.handleChange(event,element.id)}
+                        handleBlur={props.handleBlur}
+                        handleChange={props.handleChange}
                     />
                 })}
                 <button>Book!</button>

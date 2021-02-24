@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './Store.module.css';
 import { connect } from 'react-redux';
+import Header from '../Header/Header';
 
 class Store extends Component {
    
@@ -8,12 +9,7 @@ class Store extends Component {
         console.log(this.props.items)
         return (
             <div className={classes.Container}>
-                <div className={classes.Heading}>
-                    <div className={classes.StoreHeading}>
-                        <h1>STORE</h1>
-                    </div>
-
-                </div>
+                <Header heading='Store' />
                 <div className={classes.ItemsContainer}>
                     <div className={classes.ItemsHeader}>
                         <h3>Items Header</h3>

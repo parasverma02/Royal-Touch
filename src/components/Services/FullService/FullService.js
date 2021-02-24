@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import classes from './FullService.module.css';
-import HeaderImage from '../../../assets/image4.jpg';
+// import HeaderImage from '../../../assets/image4.jpg';
 import ChildServices from './ChildServices/ChildServices';
 import { connect } from 'react-redux';
+import Header from '../../Header/Header';
 
 class FullService extends Component {
 
@@ -17,13 +18,16 @@ class FullService extends Component {
         
         const parentServiceID = query.get('parentServiceID');
         const id = this.props.match.params.id;
-        
+        console.log(this.props.services);
+        console.log(id);
         for(const idx in this.props.services){
+            // console.log('here');
             if(this.props.services[idx].id === parentServiceID){
                 const subServices = this.props.services[idx].subServices;
                 for(const idx2 in subServices){
                     if(subServices[idx2].id === id){
                         this.setState({service: subServices[idx2], id: id});
+                        // console.log('here');
                         break;
                     }
                 }
@@ -40,12 +44,13 @@ class FullService extends Component {
         return (
            this.state.service? 
            <div className={classes.ServiceContainer}>
-                <div className={classes.ServiceHeader}>
+               <Header heading={this.state.service? this.state.service.name: null} />
+                {/* <div className={classes.ServiceHeader}>
                     <div className={classes.ServiceHeading}>
                         <h1>{this.state.service? this.state.service.name: null}</h1>
                     </div>
                     <img src={HeaderImage} alt="This is pic"/>
-                </div>
+                </div> */}
                 <div className={classes.ChildServicesContainer}>
                     <ChildServices services={this.state.service.childServices} />
                 </div>

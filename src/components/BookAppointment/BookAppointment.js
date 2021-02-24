@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './BookAppointment.module.css';
 import BookingForm from './BookingForm/BookingForm';
+import Heading from '../Header/Header';
 const BookAppointment = () => {
 
     const setFormElementConfig = (elementType, type, placeholder, value, validation, label) => {
@@ -124,9 +125,7 @@ const BookAppointment = () => {
 
     return (
         <div className={classes.BookAppointmentContainer}>
-            <div className={classes.BookHeading}>
-                <h1> Book an Appointment!</h1>
-            </div>
+            <Heading heading="Book an Appointment" />
             <div className={classes.BookFormContainer}>
                 <div className={classes.BookForm}>
                     <BookingForm

@@ -3,10 +3,11 @@ import classes from './Services.module.css';
 import SubService from './SubServicesSection/SubServiceSection';
 import * as actionTypes from '../../store/actions/actions';
 import { connect } from 'react-redux';
+import Header from '../Header/Header';
 class Services extends Component {
 
     componentDidMount = () => {
-        
+
         this.props.onSetServices();
     }
 
@@ -29,10 +30,7 @@ class Services extends Component {
 
         return (
             <div className={classes.Container}>
-                <div className={classes.Heading}>
-                    <h1>Services</h1>
-                </div>
-
+                <Header heading='Services' />
                 <div className={classes.SubHeading}>
                     <div>
                         <h2>Skin Care</h2>

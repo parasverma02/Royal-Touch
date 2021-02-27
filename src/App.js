@@ -4,14 +4,18 @@ import Layout from './components/Layout/Layout';
 import { BrowserRouter, Redirect, Switch } from 'react-router-dom';
 import { Route} from 'react-router-dom';
 import Services from './components/Services/Services';
-import Home from './components/Home/Home';
-import Store from './components/Store/Store';
-import About from './components/About/About';
-import FullService from './components/Services/FullService/FullService'
-import Galary from './components/Galary/Galary';
-import Contact from './components/Contact/Contact';
-import BookAppointment from './components/BookAppointment/BookAppointment';
-// import ServicesRoute from './components/Routes/ServicesRoutes/ServicesRoutes'
+import withLazyComponent from './hoc/withLazyComponent';
+
+
+//LazyLoading(Code Splitting)
+const Home = withLazyComponent(React.lazy(()=> import('./components/Home/Home')));
+const Store = withLazyComponent(React.lazy(()=> import('./components/Store/Store')));
+const About = withLazyComponent(React.lazy(()=> import('./components/About/About')));
+const FullService = withLazyComponent(React.lazy(()=> import('./components/Services/FullService/FullService')));
+const Galary = withLazyComponent(React.lazy(()=> import('./components/Galary/Galary')));
+const Contact = withLazyComponent(React.lazy(()=> import('./components/Contact/Contact')));
+const BookAppointment = withLazyComponent(React.lazy(()=> import('./components/BookAppointment/BookAppointment')));
+
 
 function App() {
   return (
@@ -20,8 +24,6 @@ function App() {
         <Route path="/home"  component={Home} />
         <Route path="/store" component={Store} />
         <Route path="/about" component={About} />
-        
-        {/* <ServicesRoute subPath="/services" /> */}
         <Route path="/galary" component={Galary} />
         <Route path="/contact" component={Contact} />  
         <Route path="/book" component={BookAppointment} />

@@ -1,5 +1,41 @@
-.Services {
-    height: 450px;
+.ServicesContainer {
+    background-color: rgb(34, 34, 34);
+}
+
+.ServicesBody {
+    box-sizing: border-box;
+    /* margin: auto; */
+    padding: 1px 0;
+    
+}
+.ServicesHeading {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.ServicesHeading h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 40px;
+    color: rgb(253, 253, 253);
+    
+}
+.UnderLine {
     width: 100%;
-    background-color: rgb(253, 245, 220);
+    height: 2px;
+    background-color: rgb(255, 170, 170);
+}
+
+.ServicesContent {
+    margin: 30px 20px;
+    display: flex;
+}
+
+.ViewServicesButton {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    
 }

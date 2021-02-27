@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AboutUs from './AboutUs/AboutUs';
 import Services from './Services/Services';
 import Galary from './Galary/Galary';
 import classes from './Home.module.css';
+import LazyLoad from 'react-lazyload';
+const Home = props => {
 
-// import ImageSlider from './ImageSlider/ImageSlider'
-const home = props => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <div className={classes.Container}>
             <div className={classes.Header}>
-            </div>   
-            <AboutUs />
-            <Services />
-            <Galary />
+            </div>
+            <LazyLoad offset={50}>
+                <AboutUs />
+            </LazyLoad>
+            <LazyLoad offset={50}>
+                <Services />
+            </LazyLoad>
+            <LazyLoad offset={70}>
+                <Galary />
+            </LazyLoad>
         </div>
     )
 }
 
-export default home
+export default Home;

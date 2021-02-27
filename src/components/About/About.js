@@ -1,5 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const about = props => (<h1>This is About</h1>)
+const About = props => {
 
-export default about
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    return (
+        <h1>This is About</h1>
+    )
+}
+
+export default About;

@@ -23,7 +23,6 @@ export const set_services = () => { //Synchronous
         axios.get('/services.json')
         .then(response => {
             dispatch(initSet_services(response.data))
-            console.log(response.data)
             
         })
         .catch(error => {

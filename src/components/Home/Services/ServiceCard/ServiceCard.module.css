@@ -1,0 +1,42 @@
+.ServiceCardContainer {
+    width: 35%;
+    margin: auto;
+}
+
+.ServiceCardContent {
+    margin: 0 15px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgb(97, 51, 51);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   display: flex;
+   flex-flow: column;
+}
+.ServiceCardImage {
+    height: 90%;
+    /* display: flex;
+    overflow: hidden; */
+}
+.ServiceCardImage  img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;    
+}
+
+.ServiceCardFooter {
+    background-color: rgb(221, 221, 221);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ServiceCardFooter h2 {
+    margin: 0;
+    font-size: 25px;
+    color: black;
+}

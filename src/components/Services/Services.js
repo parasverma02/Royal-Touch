@@ -7,7 +7,7 @@ import Header from '../Header/Header';
 class Services extends Component {
 
     componentDidMount = () => {
-
+        window.scrollTo(0, 0)
         this.props.onSetServices();
     }
 
@@ -50,7 +50,6 @@ class Services extends Component {
 
             </div>
         )
-
     }
 }
 
@@ -65,4 +64,4 @@ const mapDispatchToProps = dispatch => {
         onSetServices: () => dispatch(actionTypes.set_services())
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Services)
+export default connect(mapStateToProps, mapDispatchToProps)(Services);

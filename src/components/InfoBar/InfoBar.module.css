@@ -1,0 +1,55 @@
+.InfoBarContainer {
+    background-color: rgba(29, 29, 29, 0.801);
+    width: 100%;
+    color: rgb(221, 221, 221);
+    /* opacity: 0.8; */
+    /* z-index: 1; */
+    bottom: 0;
+    position: absolute;
+}
+
+.InfoBarContainer p {
+    margin: 0;
+}
+
+.InfoBar {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.Book {
+    width: 20%;
+}
+.Location, .Contact {
+    width: 25%;
+}
+.Timings {
+    width: 30%;
+}
+
+.Contact, .Location, .Timings, .Book {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.IconContainer, .InfoContainer{
+  padding: 5px;
+}
+.Icon {
+    font-size: 50px !important;
+    color: tomato;
+}
+
+.HoursList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.HoursList li {
+    margin-bottom: 5px;
+}

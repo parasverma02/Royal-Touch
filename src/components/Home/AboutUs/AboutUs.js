@@ -1,23 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classes from './AboutUs.module.css';
 import image from '../../../assets/image2.jpg';
 import ReadMoreButton from '../../UI/Button/ReadMoreButton/ReadMoreButton';
 import { withRouter } from 'react-router-dom';
-
-const aboutUs = (props) => {
+import MainInfoContext from '../../../context/mainInfoContext';
+const AboutUs = (props) => {
 
     const clickHandler = () => {
         props.history.push({ pathname: '/about' })
     }
-    const aboutUsText = <p>At as in understood an remarkably solicitude. Mean them
-    very seen she she. Use totally written the observe pressed
-    justice. Instantly cordially far intention recommend estimable
-    yet her his. Ladies stairs enough esteem add fat all enable.
-    Needed its design number winter see. Oh be me sure wise sons no.
-    Piqued ye of am spirit regret. Stimulated discretion impossible
-    admiration in particular conviction up. At as in understood an remarkably solicitude. Mean them
-    very seen she she. Use totally written the observe pressed
-    justice. </p>
+    const mainContext = useContext(MainInfoContext);
+    
+    const aboutUsText = <p>{mainContext.about.description}</p>
     return (
         <div className={classes.AboutUs}>
             <div className={classes.AboutUsContainer}>
@@ -50,4 +44,4 @@ const aboutUs = (props) => {
     )
 };
 
-export default withRouter(aboutUs);
+export default withRouter(AboutUs);

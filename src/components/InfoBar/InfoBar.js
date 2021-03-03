@@ -1,7 +1,13 @@
 import classes from './InfoBar.module.css';
-import React from 'react';
+import React, { useContext } from 'react';
 import MoreButton from '../UI/Button/ReadMoreButton/ReadMoreButton';
-const infoBar = () => {
+import MainInfoContext from '../../context/mainInfoContext';
+const InfoBar = () => {
+
+    const infoContext = useContext(MainInfoContext);
+    const contact = infoContext.contact;
+    const hours = infoContext.hours;
+
     return (
         <div className={classes.InfoBarContainer}>
             <div className={classes.InfoBar}>
@@ -10,8 +16,8 @@ const infoBar = () => {
                         <i className={"fa fa-phone-square " + classes.Icon} />
                     </div>
                     <div className={classes.InfoContainer}>
-                        <p>+1(226)507-4804</p>
-                        <p>v.paras2@gmail.com</p>
+                        <p>{contact.phone}</p>
+                        <p>{contact.email}</p>
                     </div>
 
                 </div>
@@ -20,7 +26,7 @@ const infoBar = () => {
                         <i className={"fa fa-map-marker " + classes.Icon} />
                     </div>
                     <div className={classes.InfoContainer}>
-                        <p>267, Shivala Colony, Amritsar, Punjab 143001</p>
+                        <p>{contact.address}</p>
                     </div>
                 </div>
                 <div className={classes.Timings}>
@@ -29,10 +35,10 @@ const infoBar = () => {
                     </div>
                     <div className={classes.InfoContainer}>
                         <ul className={classes.HoursList}>
-                            <li>Monday: 10:00am to 8:00pm</li>
-                            <li>Tuesday - Friday: 9:00am to 8:00pm</li>
-                            <li>Saturday: 9:00am to 6:00pm</li>
-                            <li>Sunday: Closed</li>
+                            <li>Monday: {hours.monday}</li>
+                            <li>Tuesday - Friday: {hours.tuesday_friday}</li>
+                            <li>Saturday: {hours.saturday}</li>
+                            <li>Sunday: {hours.sunday}</li>
                         </ul>
                     </div>
 
@@ -45,4 +51,4 @@ const infoBar = () => {
     )
 }
 
-export default infoBar;
+export default InfoBar;
